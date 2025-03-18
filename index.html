@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space-Themed Bio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+      color: white;
+      background: linear-gradient(180deg, #000428, #004e92);
+      overflow: hidden;
+    }
+
+    .stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    .stars::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+      background-size: 4px 4px;
+      animation: moveStars 50s linear infinite;
+    }
+
+    @keyframes moveStars {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .bio {
+      text-align: center;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #ffcc00;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .highlight {
+      color: #00ffcc;
+      font-weight: bold;
+    }
+
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #00ffcc;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .profile img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
+    }
+
+    .discord-button {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: white;
+      background-color: #5865F2; /* Discord's brand color */
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .discord-button:hover {
+      background-color: #4752c4; /* Darker shade for hover effect */
+    }
+
+    .github-button {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: white;
+      background-color: #000000; /* GitHub's brand color */
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .github-button:hover {
+      background-color: #333333; /* Darker shade for hover effect */
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="bio">
+    <div class="profile">
+      <a href="https://www.reddit.com/r/JuiceWRLD/comments/1eoh67j/made_by_me_matching_juicewrld_pfp_banner_discord/?rdt=33347" target="_blank">
+        <img src="https://preview.redd.it/made-by-me-matching-juicewrld-pfp-banner-discord-v0-z7qdqis3rqhd1.png?width=1080&crop=smart&auto=webp&s=a7f838bb874192219f2a50ddbd4830d764f56ca7" alt="Profile Picture">
+      </a>
+    </div>
+    <h1>I'm Gravity 🌌</h1>
+    <p><span class="highlight">Game Developer</span> | <span class="highlight">Mod Creator</span> | <span class="highlight">Coder</span></p>
+    <p>With expertise in <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, <span class="highlight">JavaScript</span>, and <span class="highlight">Python</span>, I craft unique games and mods for <em>Gorilla Tag</em> that push the boundaries of virtual reality and gaming.</p>
+    <p>For me, coding isn’t just a hobby — it’s a gravitational force pulling me toward innovation, leaving a lasting impact on the gaming universe. 🚀✨</p>
+    <a href="https://discord.gg/NCn2H5GA" class="discord-button" target="_blank">Discord - @coolboyhi</a>
+    <a href="https://github.com/Coolboyhi" class="github-button" target="_blank">GitHub</a>
+  </div>
+</body>
+</html>
